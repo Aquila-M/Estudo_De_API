@@ -6,7 +6,8 @@ const PORT = process.env.PORT || 3333 // pegará a PORT no .env e atribuir a con
 
 app.listen(PORT, () => console.log(`Server está rodando na porta ${PORT}`));
 /* o listen() inicia um servidor web, e faz com que ele escute um endereço ip e porta. */
-/* isso no segundo parâmetro é chamado de callback, basicamente uma função que somente irá rodar quando a porta 3333 for inicializada,
+/* isso no segundo parâmetro é chamado de callback, basicamente uma função que somente irá rodar quando 
+a porta 3333 for inicializada,
 ou seja, precisa que se cumpra(seja true) a porta. Uma função que irá rodar depois de outra. */
 
 /* após isso, usa-se o comando: node src/index.js; para iniciar a conexão e mostrar a mensagem
