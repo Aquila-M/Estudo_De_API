@@ -6,7 +6,7 @@ executada por completo para prosseguir. */
     /* função que servirá para selecionar todas as tasks do banco de dados(MYSQL) */
     // o await é para esperar o término da execução deste método p/ prosseguir.
     return tasks;
-}; // função irá percorrer todas as tasks disponíveis e exportá-las.
+}; // função executa uma query e irá percorrer todas as tasks disponíveis e exportá-las.
 
 module.exports = {
     getAll

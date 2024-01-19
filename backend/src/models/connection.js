@@ -1,3 +1,4 @@
+
 const mysql = require('mysql2/promise');
 /* aqui vamos criar um banco de dados na própria máquina,
 para podermos manusear na api */

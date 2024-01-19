@@ -4,7 +4,7 @@ do banco de dados, e criamos uma função assíncrona (o termo async para caract
     Basicamente, a const tasks irá acessar a função getAll das tasksModels que foi importada,
     após isso, a const getAll local irá retornar uma resposta para nós, que mostrando todas as
     tasks do banco de dados.*/
-const tasksModel = require('../models/taksModels')
+const tasksModel = require('../models/tasksModels.js')
 
 const getAll = async (req, res) => {
     const tasks =  await tasksModel.getAll();
