@@ -1,3 +1,4 @@
+
 const mysql = require('mysql2/promise');
 /* aqui vamos criar um banco de dados na própria máquina,
 para podermos manusear na api */
@@ -8,4 +9,7 @@ const connection = mysql.createPool({//cria uma fila de conexões
     database: process.env.MYSQL_DB
 });
 
-module.exports = connection;
+module.exports = connection; /* é exportada para
+que possa ser trabalhada lá na tasksModel, pois lá será
+executada querys de comando, e pra isso a conection é exportada para levar
+conexão com o banco de dados usado. */

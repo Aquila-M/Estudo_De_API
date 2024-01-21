@@ -1,5 +1,6 @@
+require('dotenv').config();
 const app = require('./app'); //importando o script app q tem o express
-require('dotenv').config(); /* todas as vaiáveis que foram colocadas
+ /* todas as vaiáveis que foram colocadas
 no .env vai estar disponíveis para uso*/
 
 const PORT = process.env.PORT || 3333 // pegará a PORT no .env e atribuir a const PORT ou atribuirá o valor 3333

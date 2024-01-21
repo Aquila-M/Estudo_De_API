@@ -11,6 +11,7 @@ const router = require('./router');
 
 const app = express() // instaciamos a variável.
 
+app.use(express.json()); //nossa api será capaz de trabalhar com dados em json.
 app.use(router); /* faz com que toda requisição que acontecer
 na nossa api, ela vai cair no router.*/
 
