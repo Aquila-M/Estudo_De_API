@@ -27,9 +27,35 @@ Fará com que seja recebida do usuário os dados para o bd, por isso o .body
 Após isso, irá retornar, em formato JSON, essa task cadastrada pelo usuário junto com o status 201.
 */
 
+const deleteTask = async (req, res) => {
+    const { id } = req.params;
+    await tasksModel.deleteTask(id);
+    return res.status(204).json();
+};
+/* Função deleteTask:
+Uma peculiaridade do deleteTask, é que o URL não o mesmo jeito que o createTask.
+precisamos acessar o id no endereço. ou seja, /tasks/id. 
+É criada uma const que pegará do req somente o id. Por isso, é preciso
+expôr req.params para ter acesso ao id. Após isso, é instanciado a
+função deleteTask do Model e jogar o id lá dentro para ser executada por completo
+a exclusão de tal task
+Por fim, só retornar um status como resposta sem, necessariamente, ter nada escrito*/
+
+const updateTask = async (req, res) => {
+    const { id } = req.params;
+    await tasksModel.updateTask(id, req.body);
+    return res.status(204).json();
+};
+/* updateTask:
+Possui a mesma sintaxe da função que deleta posts, a leve diferença
+é q a função agora está pedindo não só o id, como tbm o corpo do req que irá ser
+alterado. */
+
 module.exports ={
     getAll,
-    createTask
+    createTask,
+    deleteTask,
+    updateTask
 };
 /*basicamente criamos um getAll para poder exportar
 todo mundo depois. */
